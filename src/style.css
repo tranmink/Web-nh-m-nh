@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bảng màu nền/chữ cho hai chế độ */
+body {
+  background-color: #f6f7f4;
+  color: #1f2937;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+/* Tôn trọng người dùng bật "giảm chuyển động" */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

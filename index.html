@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quán Nhà Mình - Thực đơn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Áp dụng dark mode trước khi Vue khởi chạy để tránh nhấp nháy màn hình -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem('isDarkMode')
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        var isDark = saved !== null ? saved === 'true' : prefersDark
+        document.documentElement.classList.toggle('dark', isDark)
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
